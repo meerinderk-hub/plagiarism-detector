@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plagiarism Detection Using Word Frequency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./">Word Frequency Similarity</a>
+    <nav><a href="./">New comparison</a><a href="reports">Reports</a><a href="documents">Documents</a></nav>
+  </header>
+
+  <main>
+    <h1>Compare documents</h1>
+    <p class="lead">Paste text or upload .txt files. Every pair of documents is compared by how many words
+      they share, and the result is saved as a report.</p>
+
+    <form id="form" method="post" action="compare" accept-charset="UTF-8">
+      <div id="docs"></div>
+
+      <div class="actions">
+        <button type="button" id="addDoc" class="btn secondary">+ Add another document</button>
+        <label class="check">
+          <input type="checkbox" name="ignoreStopWords" checked>
+          Ignore common words (the, and, of&hellip;)
+        </label>
+        <button type="submit" class="btn">Compare</button>
+      </div>
+    </form>
+
+    <div class="notice">
+      <strong>Educational indicator only.</strong> The percentage shows shared vocabulary, not proof of
+      plagiarism. Common topics, quotations and technical terms also raise the score.
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
